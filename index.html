@@ -92,6 +92,7 @@
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            position: relative;
         }
 
         .food-item:hover {
@@ -99,10 +100,14 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .food-item img {
+        .food-item .emoji-icon {
             width: 100%;
             height: 150px;
-            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4em;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         }
 
         .food-name {
@@ -123,6 +128,9 @@
             z-index: 1000;
             max-width: 200px;
             text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .food-item:hover .tooltip {
@@ -199,42 +207,42 @@
                 </div>
                 <div class="food-grid">
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=200&h=150&fit=crop" alt="Chicken">
+                        <div class="emoji-icon">🍗</div>
                         <div class="food-name">Chicken</div>
                         <div class="tooltip">Cooked, plain chicken is excellent protein</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Turkey">
+                        <div class="emoji-icon">🦃</div>
                         <div class="food-name">Turkey</div>
                         <div class="tooltip">Cooked, skinless turkey is safe</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Fish">
+                        <div class="emoji-icon">🐟</div>
                         <div class="food-name">Fish</div>
                         <div class="tooltip">Cooked salmon or tuna in moderation</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1516621318423-f06f70257c72?w=200&h=150&fit=crop" alt="Eggs">
+                        <div class="emoji-icon">🥚</div>
                         <div class="food-name">Eggs</div>
                         <div class="tooltip">Cooked eggs provide protein</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd33c86?w=200&h=150&fit=crop" alt="Pumpkin">
+                        <div class="emoji-icon">🎃</div>
                         <div class="food-name">Pumpkin</div>
                         <div class="tooltip">Good for digestion and hydration</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Carrots">
+                        <div class="emoji-icon">🥕</div>
                         <div class="food-name">Carrots</div>
                         <div class="tooltip">Cooked carrots are safe and crunchy</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1585549974519-db531d5c8c4f?w=200&h=150&fit=crop" alt="Green Beans">
+                        <div class="emoji-icon">🫘</div>
                         <div class="food-name">Green Beans</div>
                         <div class="tooltip">Cooked green beans are nutritious</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=200&h=150&fit=crop" alt="Watermelon">
+                        <div class="emoji-icon">🍉</div>
                         <div class="food-name">Watermelon</div>
                         <div class="tooltip">Seedless, in small amounts only</div>
                     </div>
@@ -248,42 +256,42 @@
                 </div>
                 <div class="food-grid">
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Chocolate">
+                        <div class="emoji-icon">🍫</div>
                         <div class="food-name">Chocolate</div>
                         <div class="tooltip">Toxic - contains theobromine</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1560299106-d73740bca6c2?w=200&h=150&fit=crop" alt="Onions">
+                        <div class="emoji-icon">🧅</div>
                         <div class="food-name">Onions</div>
                         <div class="tooltip">Damages red blood cells</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd33c86?w=200&h=150&fit=crop" alt="Garlic">
+                        <div class="emoji-icon">🧄</div>
                         <div class="food-name">Garlic</div>
                         <div class="tooltip">Toxic - similar to onions</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1585518419759-98db99b912ed?w=200&h=150&fit=crop" alt="Grapes">
+                        <div class="emoji-icon">🍇</div>
                         <div class="food-name">Grapes</div>
                         <div class="tooltip">Causes kidney failure</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Raisins">
+                        <div class="emoji-icon">🍠</div>
                         <div class="food-name">Raisins</div>
                         <div class="tooltip">Toxic - similar to grapes</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1585518419759-98db99b912ed?w=200&h=150&fit=crop" alt="Avocado">
+                        <div class="emoji-icon">🥑</div>
                         <div class="food-name">Avocado</div>
                         <div class="tooltip">Contains persin - toxic to cats</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1585518419759-98db99b912ed?w=200&h=150&fit=crop" alt="Alcohol">
+                        <div class="emoji-icon">🍷</div>
                         <div class="food-name">Alcohol</div>
                         <div class="tooltip">Can cause intoxication & coma</div>
                     </div>
                     <div class="food-item">
-                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Caffeine">
+                        <div class="emoji-icon">☕</div>
                         <div class="food-name">Caffeine</div>
                         <div class="tooltip">Causes heart problems</div>
                     </div>
