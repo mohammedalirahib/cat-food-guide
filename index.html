@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe & Harmful Foods for Cats</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-header {
+            padding: 25px;
+            color: white;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+
+        .safe-header {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .harmful-header {
+            background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);
+        }
+
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 25px;
+        }
+
+        .food-item {
+            text-align: center;
+            background: #f9f9f9;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .food-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .food-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .food-name {
+            padding: 15px;
+            font-weight: 600;
+            color: #333;
+            font-size: 0.95em;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            z-index: 1000;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .food-item:hover .tooltip {
+            display: block;
+        }
+
+        .info-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .info-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .info-section ul {
+            list-style-position: inside;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .info-section li {
+            margin-bottom: 10px;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #856404;
+        }
+
+        .safe-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            color: #155724;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            opacity: 0.9;
+        }
+
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐱 Cat Food Guide 🐱</h1>
+            <p>Know which foods are safe and which are dangerous for your feline friend</p>
+        </header>
+
+        <div class="sections">
+            <!-- SAFE FOODS -->
+            <div class="section">
+                <div class="section-header safe-header">
+                    ✅ Safe Foods for Cats
+                </div>
+                <div class="food-grid">
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=200&h=150&fit=crop" alt="Chicken">
+                        <div class="food-name">Chicken</div>
+                        <div class="tooltip">Cooked, plain chicken is excellent protein</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Turkey">
+                        <div class="food-name">Turkey</div>
+                        <div class="tooltip">Cooked, skinless turkey is safe</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Fish">
+                        <div class="food-name">Fish</div>
+                        <div class="tooltip">Cooked salmon or tuna in moderation</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1516621318423-f06f70257c72?w=200&h=150&fit=crop" alt="Eggs">
+                        <div class="food-name">Eggs</div>
+                        <div class="tooltip">Cooked eggs provide protein</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd33c86?w=200&h=150&fit=crop" alt="Pumpkin">
+                        <div class="food-name">Pumpkin</div>
+                        <div class="tooltip">Good for digestion and hydration</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Carrots">
+                        <div class="food-name">Carrots</div>
+                        <div class="tooltip">Cooked carrots are safe and crunchy</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1585549974519-db531d5c8c4f?w=200&h=150&fit=crop" alt="Green Beans">
+                        <div class="food-name">Green Beans</div>
+                        <div class="tooltip">Cooked green beans are nutritious</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=200&h=150&fit=crop" alt="Watermelon">
+                        <div class="food-name">Watermelon</div>
+                        <div class="tooltip">Seedless, in small amounts only</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HARMFUL FOODS -->
+            <div class="section">
+                <div class="section-header harmful-header">
+                    ❌ Harmful Foods for Cats
+                </div>
+                <div class="food-grid">
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Chocolate">
+                        <div class="food-name">Chocolate</div>
+                        <div class="tooltip">Toxic - contains theobromine</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1560299106-d73740bca6c2?w=200&h=150&fit=crop" alt="Onions">
+                        <div class="food-name">Onions</div>
+                        <div class="tooltip">Damages red blood cells</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1599599810694-b5ac4dd33c86?w=200&h=150&fit=crop" alt="Garlic">
+                        <div class="food-name">Garlic</div>
+                        <div class="tooltip">Toxic - similar to onions</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1585518419759-98db99b912ed?w=200&h=150&fit=crop" alt="Grapes">
+                        <div class="food-name">Grapes</div>
+                        <div class="tooltip">Causes kidney failure</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Raisins">
+                        <div class="food-name">Raisins</div>
+                        <div class="tooltip">Toxic - similar to grapes</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1585518419759-98db99b912ed?w=200&h=150&fit=crop" alt="Avocado">
+                        <div class="food-name">Avocado</div>
+                        <div class="tooltip">Contains persin - toxic to cats</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1585518419759-98db99b912ed?w=200&h=150&fit=crop" alt="Alcohol">
+                        <div class="food-name">Alcohol</div>
+                        <div class="tooltip">Can cause intoxication & coma</div>
+                    </div>
+                    <div class="food-item">
+                        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=200&h=150&fit=crop" alt="Caffeine">
+                        <div class="food-name">Caffeine</div>
+                        <div class="tooltip">Causes heart problems</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SAFE FOODS DETAILS -->
+        <div class="info-section">
+            <h2><span class="emoji">✅</span> Safe Foods - Detailed Information</h2>
+            <div class="safe-box">
+                <strong>General Rule:</strong> Always cook foods without seasoning, salt, or oil. Remove bones and serve in small portions.
+            </div>
+            <ul>
+                <li><strong>Chicken & Turkey:</strong> Excellent source of lean protein. Must be cooked plain without seasoning.</li>
+                <li><strong>Fish:</strong> Safe in moderation. Avoid raw fish and remove all bones. High in omega-3 fatty acids.</li>
+                <li><strong>Eggs:</strong> Cooked eggs are nutritious. Never give raw eggs due to salmonella risk.</li>
+                <li><strong>Pumpkin:</strong> Great for digestive health. Use plain canned pumpkin, not pie filling.</li>
+                <li><strong>Vegetables:</strong> Carrots, green beans, and peas are safe when cooked and chopped small.</li>
+                <li><strong>Watermelon:</strong> Remove seeds and rind. Offer small pieces as occasional treats.</li>
+                <li><strong>Cooked Rice:</strong> Plain white or brown rice aids digestion.</li>
+                <li><strong>Plain Yogurt:</strong> Small amounts are okay, but many cats are lactose intolerant.</li>
+            </ul>
+        </div>
+
+        <!-- HARMFUL FOODS DETAILS -->
+        <div class="info-section">
+            <h2><span class="emoji">❌</span> Harmful Foods - Why They're Dangerous</h2>
+            <div class="warning-box">
+                <strong>⚠️ URGENT:</strong> If your cat ingests any toxic food, contact your veterinarian or animal poison control immediately!
+            </div>
+            <ul>
+                <li><strong>Chocolate:</strong> Contains theobromine and caffeine. Dark chocolate is most dangerous. Even small amounts can cause vomiting and heart issues.</li>
+                <li><strong>Onions & Garlic:</strong> Destroy hemoglobin in red blood cells, causing anemia. Cooked or raw, both are toxic.</li>
+                <li><strong>Grapes & Raisins:</strong> Cause acute kidney failure. The exact toxic compound is unknown, but even small amounts are dangerous.</li>
+                <li><strong>Avocado:</strong> Contains persin, a fungicidal toxin that can cause vomiting and diarrhea.</li>
+                <li><strong>Alcohol:</strong> Causes intoxication, low blood sugar, and respiratory depression. Can be fatal.</li>
+                <li><strong>Caffeine:</strong> Found in coffee, tea, and energy drinks. Causes increased heart rate and tremors.</li>
+                <li><strong>Xylitol (Artificial Sweetener):</strong> Found in sugar-free products. Causes rapid insulin release and liver damage.</li>
+                <li><strong>Milk & Dairy:</strong> Many adult cats are lactose intolerant and experience digestive issues.</li>
+                <li><strong>Raw Dough:</strong> Can expand in the stomach and cause bloating or alcohol production.</li>
+                <li><strong>Bones:</strong> Can splinter and cause choking or internal injuries.</li>
+            </ul>
+        </div>
+
+        <!-- EMERGENCY TIPS -->
+        <div class="info-section">
+            <h2><span class="emoji">🚨</span> Emergency Tips</h2>
+            <ul>
+                <li><strong>Poison Control:</strong> ASPCA Animal Poison Control Center: (888) 426-4435</li>
+                <li><strong>Symptoms of Poisoning:</strong> Vomiting, diarrhea, lethargy, drooling, difficulty breathing, or seizures</li>
+                <li><strong>Action Steps:</strong> Don't wait for symptoms. Call immediately if your cat ate something toxic.</li>
+                <li><strong>Prevention:</strong> Store all human food securely and never leave toxic foods unattended on counters or tables.</li>
+                <li><strong>Know Your Cat's Diet:</strong> Keep a record of your cat's normal diet and any foods given as treats.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>🐱 Made with care for cat lovers everywhere | Last Updated: 2024</p>
+            <p>Always consult your veterinarian before introducing new foods to your cat's diet</p>
+        </footer>
+    </div>
+</body>
+</html>
